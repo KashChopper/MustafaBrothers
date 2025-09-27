@@ -1,0 +1,161 @@
+Build Mustafa Brothers (Next.js + MUI + TSX) — Static UI only
+
+Create a responsive, accessible, component-driven static UI for “Mustafa Brothers” — a small mobile shop that sells mobile accessories and offers mobile repair services. Build with Next.js (TypeScript / TSX) and Material UI (MUI v5+). This task is UI-only: use static data imported from local files (no API or backend). Make components reusable and well-typed for easy backend integration later.
+
+Requirements
+
+Tech: Next.js (TS), React + TSX, MUI v5.
+
+Static data only: create data files under /src/data (products.ts, repairs.ts, owner.ts).
+
+Use MUI Theme + CssBaseline. Keep styling via MUI components & sx props; avoid global CSS except small layout helpers.
+
+Mobile-first responsive design: 1 column small, 2 medium, 3+ large for product grid.
+
+Accessibility: alt text on images, semantic HTML, proper aria labels for actionable elements.
+
+Pages
+
+/ (Home) — Hero, short tagline, Owner box (photo + contact + short bio), featured products, quick link to Repairs.
+
+/shop — Product grid listing product cards (image, title, price, tags).
+
+/repairs — Repair services as cards (title, ETA, starting price, description).
+
+/about — Owner details + shop story and owner photo box.
+
+/contact — Static contact info (phone, address, opening hours).
+
+Static data shapes (TypeScript)
+
+src/data/owner.ts
+
+export const owner = {
+  id: 'owner1',
+  name: 'Mustafa Khan',
+  photo: '/images/owner/mustafa-placeholder.jpg',
+  phone: '+91 98765 43210',
+  about: 'Owner & Head Technician — 10+ years repairing mobile devices.'
+}
+
+
+src/data/products.ts
+
+export type Product = {
+  id: string;
+  title: string;
+  price: number;
+  category: string;
+  brand?: string;
+  image?: string;
+  tags?: string[];
+};
+export const products: Product[] = [ /* 8-12 sample items */ ];
+
+
+src/data/repairs.ts
+
+export type Repair = {
+  id: string;
+  title: string;
+  ETA?: string;
+  priceFrom?: number;
+  description?: string;
+  icon?: string;
+};
+export const repairs: Repair[] = [ /* sample services */ ];
+
+
+Required reusable components (typed with interfaces)
+
+Header — AppBar with shop name, nav links, call button.
+interface HeaderProps { shopName: string }
+
+Footer — contact + hours.
+
+ProductCard — image, title, price, tags, optional onAdd callback.
+interface ProductCardProps { product: Product; onAdd?: (id:string)=>void }
+
+ProductGrid — responsive grid that receives Product[].
+
+RepairCard — service card with ETA and priceFrom.
+
+OwnerCard — owner photo box (avatar + name + phone + about). Photo must be replaceable/placeholder.
+interface OwnerCardProps { name:string; photo?:string; phone?:string; about?:string }
+
+SectionHeading — reusable section title with optional action button.
+
+Badge/Tag — small Chip component for product tags.
+
+Optional: CartDrawer stub (no functionality — just UI placeholder).
+
+UI / Behavior details
+
+Home hero: show shop name “Mustafa Brothers” and tagline: “Mobile accessories • Fast, trusted repairs”.
+
+Owner box: visible on Home and About; shows placeholder avatar if no photo. Provide an obvious bordered box to later allow owner-photo upload.
+
+ProductCard: MUI Card with CardMedia (image), CardContent, Chip tags, and an Add button that is no-op (or shows a toast/snackbar saying “Cart not implemented — static demo”).
+
+RepairCard: show ETA (e.g., “1–2 days”), priceFrom prefixed with ₹, and short description.
+
+Responsive grid breakpoints: xs=12 (1 col), sm=6 (2 cols), md=4 (3 cols), lg=3 or 4 depending.
+
+Theme
+
+Provide src/styles/theme.ts with createTheme — choose a friendly primary color (e.g., deep blue #0b5fff) and an accent/secondary color. Export ThemeProvider wrapper in _app.tsx.
+
+Acceptance criteria
+
+App runs with npm run dev and shows Home, Shop, Repairs, About, Contact routes.
+
+All data loaded from /src/data/* files only; no network calls.
+
+OwnerCard is visible with placeholder image and contact details.
+
+ProductGrid renders at least 8 sample ProductCards responsively.
+
+Components are TypeScript-typed with no any types.
+
+Buttons and images have accessible labels/alt text.
+
+Suggested folder structure
+
+/src
+  /components
+    Header.tsx
+    Footer.tsx
+    ProductCard.tsx
+    ProductGrid.tsx
+    OwnerCard.tsx
+    RepairCard.tsx
+    SectionHeading.tsx
+  /data
+    owner.ts
+    products.ts
+    repairs.ts
+  /pages (or /app)
+    index.tsx
+    /shop/index.tsx
+    /repairs/index.tsx
+    about.tsx
+    contact.tsx
+  /styles
+    theme.ts
+
+
+Dev commands / setup
+
+npx create-next-app@latest --ts
+npm install @mui/material @emotion/react @emotion/styled
+# copy data and components, wrap _app.tsx with ThemeProvider & CssBaseline
+npm run dev
+
+
+Extra
+
+Add placeholder images under /public/images and use descriptive alt text.
+
+Keep components small and composable so the backend (Firebase or REST) can be added later.
+
+Keep one inline example of products.ts with 8 items (mix accessories like chargers, tempered glass, cases).
