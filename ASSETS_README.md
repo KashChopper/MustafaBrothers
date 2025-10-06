@@ -13,3 +13,6 @@ Where
 Notes
 - If you move images into `client/src/assets/`, update imports accordingly or remove the `@assets` alias.
 - Keep `server.fs.strict` enabled for safety; only extend `allow` for trusted folders.
+Vercel deployment note
+- The Vite project is rooted at `client/`, so production builds are emitted to `client/dist`.
+- Vercel expects the output directory at the repository root by default. To avoid "No Output Directory named \"dist\" found" errors, this repo includes `vercel.json` which configures the static-build to use `client/dist` as the `distDir`.
