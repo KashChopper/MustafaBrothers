@@ -34,7 +34,7 @@ export const owner = {
   id: 'owner1',
   name: 'Mustafa Khan',
   photo: '/images/owner/mustafa-placeholder.jpg',
-  phone: '+91 98765 43210',
+  phone: '+91 7006304625',
   about: 'Owner & Head Technician — 10+ years repairing mobile devices.'
 }
 

@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import ProductGrid from '@/components/ProductGrid';
 import SectionHeading from '@/components/SectionHeading';
-import { products } from '@shared/data';
+import { products } from '@/shared/data';
+
 
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');

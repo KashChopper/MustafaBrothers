@@ -1,5 +1,5 @@
 import ProductCard from '../ProductCard';
-import { products } from '@shared/data';
+import { products } from '@/shared/data';
 
 export default function ProductCardExample() {
   return (

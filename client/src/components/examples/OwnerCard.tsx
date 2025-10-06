@@ -1,5 +1,5 @@
 import OwnerCard from '../OwnerCard';
-import { owner } from '@shared/data';
+import { owner } from '@/shared/data';
 
 export default function OwnerCardExample() {
   return (

@@ -4,7 +4,7 @@ import { ArrowRight, Smartphone, Wrench } from 'lucide-react';
 import OwnerCard from '@/components/OwnerCard';
 import ProductGrid from '@/components/ProductGrid';
 import SectionHeading from '@/components/SectionHeading';
-import { owner, products, repairs } from '@shared/data';
+import { owner, products, repairs } from '@/shared/data';
 import { useLocation } from 'wouter';
 
 export default function Home() {

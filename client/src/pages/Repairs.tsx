@@ -2,7 +2,7 @@ import RepairCard from '@/components/RepairCard';
 import SectionHeading from '@/components/SectionHeading';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Clock, Shield } from 'lucide-react';
-import { repairs } from '@shared/data';
+import { repairs } from '@/shared/data';
 
 export default function Repairs() {
   const handleContactForRepair = (repairId: string) => {

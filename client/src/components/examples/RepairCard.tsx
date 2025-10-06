@@ -1,5 +1,5 @@
 import RepairCard from '../RepairCard';
-import { repairs } from '@shared/data';
+import { repairs } from '@/shared/data';
 
 export default function RepairCardExample() {
   return (

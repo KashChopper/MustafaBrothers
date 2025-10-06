@@ -27,15 +27,15 @@ export interface Repair {
   icon?: string;
 }
 
-import ownerPhoto from '@assets/generated_images/Owner_portrait_photo_36796be4.png';
-import chargerImage from '@assets/generated_images/Phone_charger_product_f976d628.png';
+// import ownerPhoto from '@assets/generated_images/Owner_portrait_photo_36796be4.png';
+import PhoneChargerImg from '@assets/generated_images/Phone_charger_product_f976d628.png';
 import protectorImage from '@assets/generated_images/Screen_protector_product_285abcbd.png';
 import caseImage from '@assets/generated_images/Phone_case_product_4d3b3a77.png';
 
 export const owner: Owner = {
   id: 'owner1',
   name: 'Zahid',
-  photo: ownerPhoto, // todo: remove mock functionality
+  // photo: ownerPhoto, // todo: remove mock functionality
   phone: '+91 7006304625',
   about: 'Owner & Head Technician — 10+ years repairing mobile devices. Passionate about providing quality service and genuine parts.'
 };
@@ -48,7 +48,7 @@ export const products: Product[] = [
     price: 1299,
     category: 'Chargers',
     brand: 'Samsung',
-    image: chargerImage,
+    image: PhoneChargerImg,
     tags: ['Fast Charging', 'Qi Compatible']
   },
   {

@@ -1,5 +1,5 @@
 import ProductGrid from '../ProductGrid';
-import { products } from '@shared/data';
+import { products } from '@/shared/data';
 
 export default function ProductGridExample() {
   return (

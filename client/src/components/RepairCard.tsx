@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Phone, Settings, Battery, Smartphone, Droplets, Zap } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import type { Repair } from '@shared/data';
+import type { Repair } from '@/shared/data';
 
 interface RepairCardProps {
   repair: Repair;

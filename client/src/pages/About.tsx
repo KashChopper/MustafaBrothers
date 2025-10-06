@@ -2,7 +2,7 @@ import OwnerCard from '@/components/OwnerCard';
 import SectionHeading from '@/components/SectionHeading';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Clock, MapPin } from 'lucide-react';
-import { owner } from '@shared/data';
+import { owner } from '@/shared/data';
 
 export default function About() {
   return (
