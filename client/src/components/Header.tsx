@@ -21,7 +21,7 @@ export default function Header({ shopName }: HeaderProps) {
   ];
 
   const handleCall = () => {
-    console.log('Call button clicked - would dial +91 98765 43210');
+    console.log('Call button clicked - would dial +91 7006304625');
     // In real app: window.location.href = 'tel:+919876543210';
   };
 

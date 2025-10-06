@@ -34,9 +34,9 @@ import caseImage from '@assets/generated_images/Phone_case_product_4d3b3a77.png'
 
 export const owner: Owner = {
   id: 'owner1',
-  name: 'Mustafa Khan',
+  name: 'Zahid',
   photo: ownerPhoto, // todo: remove mock functionality
-  phone: '+91 98765 43210',
+  phone: '+91 7006304625',
   about: 'Owner & Head Technician — 10+ years repairing mobile devices. Passionate about providing quality service and genuine parts.'
 };
 
