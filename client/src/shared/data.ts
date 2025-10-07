@@ -1,47 +1,21 @@
-// Static data for Mustafa Brothers mobile shop
+// Static data for Mustafa Brothers mobile shop (plain JS, UI-focused)
 
-export interface Owner {
-  id: string;
-  name: string;
-  photo?: string;
-  phone: string;
-  about: string;
-}
-
-export interface Product {
-  id: string;
-  title: string;
-  price: number;
-  category: string;
-  brand?: string;
-  image?: string;
-  tags?: string[];
-}
-
-export interface Repair {
-  id: string;
-  title: string;
-  ETA?: string;
-  priceFrom?: number;
-  description?: string;
-  icon?: string;
-}
-
-// import ownerPhoto from '@assets/generated_images/Owner_portrait_photo_36796be4.png';
+// Use images from attached_assets/generated_images or public/images
+import ownerPhoto from '@assets/generated_images/Owner_portrait_photo_36796be4.png';
 import PhoneChargerImg from '@assets/generated_images/Phone_charger_product_f976d628.png';
 import protectorImage from '@assets/generated_images/Screen_protector_product_285abcbd.png';
 import caseImage from '@assets/generated_images/Phone_case_product_4d3b3a77.png';
 
-export const owner: Owner = {
+export const owner = {
   id: 'owner1',
   name: 'Zahid',
-  // photo: ownerPhoto, // todo: remove mock functionality
+  photo: ownerPhoto,
   phone: '+91 7006304625',
-  about: 'Owner & Head Technician — 10+ years repairing mobile devices. Passionate about providing quality service and genuine parts.'
+  about:
+    'Owner & Head Technician — 10+ years repairing mobile devices. Passionate about providing quality service and genuine parts.',
 };
 
-export const products: Product[] = [
-  // todo: remove mock functionality
+export const products = [
   {
     id: 'p1',
     title: 'Wireless Phone Charger',
@@ -49,7 +23,7 @@ export const products: Product[] = [
     category: 'Chargers',
     brand: 'Samsung',
     image: PhoneChargerImg,
-    tags: ['Fast Charging', 'Qi Compatible']
+    tags: ['Fast Charging', 'Qi Compatible'],
   },
   {
     id: 'p2',
@@ -58,7 +32,7 @@ export const products: Product[] = [
     category: 'Protection',
     brand: 'Universal',
     image: protectorImage,
-    tags: ['9H Hardness', 'Crystal Clear']
+    tags: ['9H Hardness', 'Crystal Clear'],
   },
   {
     id: 'p3',
@@ -67,7 +41,7 @@ export const products: Product[] = [
     category: 'Cases',
     brand: 'Apple',
     image: caseImage,
-    tags: ['Drop Protection', 'Camera Guard']
+    tags: ['Drop Protection', 'Camera Guard'],
   },
   {
     id: 'p4',
@@ -75,7 +49,7 @@ export const products: Product[] = [
     price: 899,
     category: 'Chargers',
     brand: 'OnePlus',
-    tags: ['30W', 'Quick Charge']
+    tags: ['30W', 'Quick Charge'],
   },
   {
     id: 'p5',
@@ -83,7 +57,7 @@ export const products: Product[] = [
     price: 2499,
     category: 'Audio',
     brand: 'Xiaomi',
-    tags: ['Wireless', 'Long Battery']
+    tags: ['Wireless', 'Long Battery'],
   },
   {
     id: 'p6',
@@ -91,7 +65,7 @@ export const products: Product[] = [
     price: 1899,
     category: 'Power',
     brand: 'Mi',
-    tags: ['Fast Charging', 'Compact']
+    tags: ['Fast Charging', 'Compact'],
   },
   {
     id: 'p7',
@@ -99,7 +73,7 @@ export const products: Product[] = [
     price: 799,
     category: 'Accessories',
     brand: 'Universal',
-    tags: ['360° Rotation', 'Secure Grip']
+    tags: ['360° Rotation', 'Secure Grip'],
   },
   {
     id: 'p8',
@@ -107,27 +81,27 @@ export const products: Product[] = [
     price: 699,
     category: 'Cables',
     brand: 'Apple',
-    tags: ['MFi Certified', '1.5M Length']
-  }
+    tags: ['MFi Certified', '1.5M Length'],
+  },
 ];
 
-export const repairs: Repair[] = [
-  // todo: remove mock functionality
+export const repairs = [
   {
     id: 'r1',
     title: 'Screen Replacement',
     ETA: '1-2 hours',
     priceFrom: 2500,
     description: 'Professional screen replacement with genuine parts and warranty',
-    icon: 'Smartphone'
+    icon: 'Smartphone',
   },
   {
     id: 'r2',
     title: 'Battery Replacement',
     ETA: '30-45 minutes',
     priceFrom: 1500,
-    description: 'High-quality battery replacement to restore your phone\'s performance',
-    icon: 'Battery'
+    description:
+      "High-quality battery replacement to restore your phone's performance",
+    icon: 'Battery',
   },
   {
     id: 'r3',
@@ -135,7 +109,7 @@ export const repairs: Repair[] = [
     ETA: '1-2 days',
     priceFrom: 3000,
     description: 'Complete water damage assessment and repair service',
-    icon: 'Droplets'
+    icon: 'Droplets',
   },
   {
     id: 'r4',
@@ -143,7 +117,7 @@ export const repairs: Repair[] = [
     ETA: '2-3 hours',
     priceFrom: 1200,
     description: 'Repair or replacement of damaged charging ports',
-    icon: 'Zap'
+    icon: 'Zap',
   },
   {
     id: 'r5',
@@ -151,6 +125,6 @@ export const repairs: Repair[] = [
     ETA: '1-2 hours',
     priceFrom: 800,
     description: 'Software troubleshooting, updates, and virus removal',
-    icon: 'Settings'
-  }
+    icon: 'Settings',
+  },
 ];
