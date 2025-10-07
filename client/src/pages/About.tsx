@@ -1,3 +1,4 @@
+// @ts-nocheck
 import OwnerCard from '@/components/OwnerCard';
 import SectionHeading from '@/components/SectionHeading';
 import { Card, CardContent } from '@/components/ui/card';

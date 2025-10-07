@@ -35,8 +35,11 @@ export default defineConfig({
     fs: {
       strict: true,
       deny: ["**/.*"],
-      // allow serving image assets placed outside the Vite root (client/)
-      allow: [path.resolve(__dirname, "attached_assets")]
+      // allow serving image assets and the client root placed outside the Vite root
+      allow: [
+        path.resolve(__dirname, "attached_assets"),
+        path.resolve(__dirname, "client")
+      ]
     },
   },
 });

@@ -16,3 +16,14 @@ Notes
 Vercel deployment note
 - The Vite project is rooted at `client/`, so production builds are emitted to `client/dist`.
 - Vercel expects the output directory at the repository root by default. To avoid "No Output Directory named \"dist\" found" errors, this repo includes `vercel.json` which configures the static-build to use `client/dist` as the `distDir`.
+
+Running the app locally on port 3000
+- Install dependencies (if you haven't):
+
+  npm install
+
+- Start the dev server on port 3000:
+
+  npm run dev:3000
+
+  Then open http://localhost:3000/ in your browser.

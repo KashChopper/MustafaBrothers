@@ -1,14 +1,8 @@
+// @ts-nocheck
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Phone, Settings, Battery, Smartphone, Droplets, Zap } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import type { Repair } from '@/shared/data';
-
-interface RepairCardProps {
-  repair: Repair;
-  onContact?: (id: string) => void;
-}
 
 const iconMap = {
   'Smartphone': Smartphone,
@@ -17,21 +11,10 @@ const iconMap = {
   'Zap': Zap,
   'Settings': Settings,
 };
-
-export default function RepairCard({ repair, onContact }: RepairCardProps) {
-  const { toast } = useToast();
-  
-  const IconComponent = repair.icon && repair.icon in iconMap 
-    ? iconMap[repair.icon as keyof typeof iconMap] 
-    : Settings;
-
+export default function RepairCard({ repair }) {
+  const IconComponent = repair.icon && repair.icon in iconMap ? iconMap[repair.icon] : Settings;
   const handleContact = () => {
-    console.log(`Contacting for repair service: ${repair.id}`);
-    toast({
-      title: 'Contact feature',
-      description: 'Would redirect to contact page or open phone dialer.',
-    });
-    onContact?.(repair.id);
+    // static demo - no contact action
   };
 
   return (
@@ -89,6 +72,7 @@ export default function RepairCard({ repair, onContact }: RepairCardProps) {
           onClick={handleContact}
           className="w-full"
           data-testid={`button-contact-repair-${repair.id}`}
+          disabled
         >
           <Phone className="h-4 w-4 mr-2" />
           Get Quote

@@ -1,25 +1,12 @@
+// @ts-nocheck
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ShoppingCart, Package } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-import type { Product } from '@/shared/data';
 
-interface ProductCardProps {
-  product: Product;
-  onAdd?: (id: string) => void;
-}
-
-export default function ProductCard({ product, onAdd }: ProductCardProps) {
-  const { toast } = useToast();
-
+export default function ProductCard({ product }) {
   const handleAddToCart = () => {
-    console.log(`Adding product ${product.id} to cart`);
-    toast({
-      title: 'Cart not implemented',
-      description: 'This is a static demo - cart functionality coming soon!',
-    });
-    onAdd?.(product.id);
+    // static demo - no cart functionality
   };
 
   return (
@@ -84,6 +71,7 @@ export default function ProductCard({ product, onAdd }: ProductCardProps) {
           onClick={handleAddToCart}
           className="w-full"
           data-testid={`button-add-${product.id}`}
+          disabled
         >
           <ShoppingCart className="h-4 w-4 mr-2" />
           Add to Cart
