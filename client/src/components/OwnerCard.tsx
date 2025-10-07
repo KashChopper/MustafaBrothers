@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
-export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', about = '' }) {
+export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', about = '', photo }: { name?: string; phone?: string; about?: string; photo?: string }) {
   const handleCall = () => {
     console.log(`Calling ${phone}`);
   };
