@@ -61,3 +61,5 @@ export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', ab
     </Card>
   );
 }
+
+// this is the test for the pr s
