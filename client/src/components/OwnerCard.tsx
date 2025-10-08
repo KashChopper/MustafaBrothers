@@ -17,7 +17,6 @@ export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', ab
     <Card className="hover-elevate">
       <CardContent className="p-6">
         <div className="flex flex-col sm:flex-row gap-4 items-start">
-          {/* Owner Photo */}
           <div className="relative group">
             <Avatar className="h-20 w-20 border-2 border-border">
               <AvatarImage
@@ -62,3 +61,5 @@ export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', ab
     </Card>
   );
 }
+
+// this is the test for the pr s
