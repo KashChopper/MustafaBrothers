@@ -8,7 +8,7 @@ export default function OwnerCard({ name = 'Zahid', phone = '+91 7006304625', ab
   const handleCall = () => {
     console.log(`Calling ${phone}`);
   };
-
+  // photo 
   const handlePhotoUpload = () => {
     console.log('Photo upload triggered - would open file picker');
   };
