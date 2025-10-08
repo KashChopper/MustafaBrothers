@@ -7,7 +7,7 @@ import { Phone, MapPin, Clock, Mail, MessageCircle } from 'lucide-react';
 export default function Contact() {
   const contactInfo = {
     phone: '+91 7006304625',
-    email: 'info@mustafabrothers.com',
+    email: 'Mustafaxahid20@gmail.com',
     address: 'Main Market, Near JK Bank, Frisal, Kulgam, J&K',
     hours: {
       weekdays: 'Monday - Saturday: 10:00 AM - 8:00 PM',
