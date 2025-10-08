@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
-export default function SectionHeading({ title, subtitle, actionLabel, onAction, centered = false }) {
+export default function SectionHeading({ title, subtitle, actionLabel, onAction, centered = false }: { title?: string; subtitle?: string; actionLabel?: string; onAction?: () => void; centered?: boolean }) {
   return (
     <div className={`space-y-2 ${centered ? 'text-center' : ''}`}>
       <div className={`flex ${centered ? 'justify-center' : 'justify-between'} items-center gap-4`}>
