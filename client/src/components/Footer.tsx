@@ -4,7 +4,7 @@ export default function Footer() {
   const contactInfo = {
     // todo: remove mock functionality
     phone: '+91 7006304625',
-    address: '123 Main Street, Electronics Market, Mumbai 400001',
+    address: 'Main Market, Near JK Bank, Frisal, Kulgam, J&K',
     hours: 'Mon-Sat: 10:00 AM - 8:00 PM, Sun: 11:00 AM - 6:00 PM'
   };
 

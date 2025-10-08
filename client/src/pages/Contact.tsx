@@ -8,7 +8,7 @@ export default function Contact() {
   const contactInfo = {
     phone: '+91 7006304625',
     email: 'info@mustafabrothers.com',
-    address: '123 Main Street, Electronics Market, Mumbai 400001',
+    address: 'Main Market, Near JK Bank, Frisal, Kulgam, J&K',
     hours: {
       weekdays: 'Monday - Saturday: 10:00 AM - 8:00 PM',
       sunday: 'Sunday: 11:00 AM - 6:00 PM'
